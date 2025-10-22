@@ -56,6 +56,14 @@ At least one new type of input that we haven't covered in class. You can find th
 3. Look at the Required HTML Elements and Required CSS Elements.
 Make a rough plan with your partner on what content you want on your page and how you want it to look.
 Consider sketching a picture to plan.
+
+
+
+Todo (add if you find more):
+input type = number - DONE Phone Number added
+input type = radio 
+1 new type of input - might be done already with date
+
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -93,7 +101,7 @@ Consider sketching a picture to plan.
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
             </div>
 
-            <div>
+            <div class="form-contents">
                 <input type="number" id="idNumber" name="idNumber" placeholder="ID Number">
             </div>
             
@@ -103,8 +111,13 @@ Consider sketching a picture to plan.
             </div>
 
             <div class="form-contents">
-                <label for="name">Name:</label>
+                <label for="name">Name (First/Last):</label>
                 <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+
+            <div class="form-contents">
+                <label for="phone">Phone Number:</label>
+                <input type="number" id="phone" name="phone" placeholder="111-222-3333" required>
             </div>
             
             <div class="form-contents">
