@@ -1,70 +1,9 @@
-<!--
-You will work with a partner for this assignment. Please do this assignment without AI
 
-Setup
-Create a GitHub repository and liveshare with your partner to work on this assignment. You can look at previous assignments to refresh on how to do this.
-
-Steps
-1. Come up with an idea for a sign-up form for a company, non-profit, club, etc. It can be a real organization or one that you make up.
-
-2. Brainstorm with your partner what type of information you would want to collect. Match them to the list of Required Form Elements (described at the bottom of this assignment), and write a comment in your HTML with your plans. For example:
-
-first name - text input
-age - number input
-night shift vs day shift - radio buttons
-...more
-
-3. Look at the Required HTML Elements and Required CSS Elements. Make a rough plan with your partner on what content you want on your page and how you want it to look. Consider sketching a picture to plan.
-
-4. Begin implementing! I recommend doing a small bit at a time, checking it against the HTML validator, checking that the data shows properly in the Google SheetLinks to an external site. when submitted, and fixing any issues as they come up. Then, move on to the next part.
-
-5. When you're ready to submit, check one last time that your HTML passes the validator and your data properly shows up in the Google Sheet. Make sure your code is pushed to GitHub.
-
-6. Enable GitHub pages and ensure your page shows up.
-
-7. Paste a link to your page here on Canvas.
-
-Required Functionality
-Your HTML must pass the HTML validator with no errors or warnings: https://validator.w3.org/nu/Links to an external site.
-Your form must be able to properly submit to the Google Sheet.
-Required HTML Elements
-Heading
-Image - Remember to use an alt tag! Feel free to use an image you find online or make one using this AI image generator: https://deepdreamgenerator.com/generateLinks to an external site.
-List (either ol or ul)
-Div to help with vertical spacing
-Required Form Elements
-input type = text
-input type = number
-input type = radio
-select
-submit button that uses this link to send data to the Google Sheet: 
-https://script.google.com/macros/s/AKfycbz6cewkwC6P68-qotOokhBb_v1Zxr3aozRItX-rFramd4p_7R3XzwHLj7o1mN-6Okez/exec
-
-At least one form element must be required for the user to fill out
-All form controls should be labeled using the label tag.
-Check that the form is working using this Google Sheet
-At least one new type of input that we haven't covered in class. You can find the input types and how to use them here: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/inputLinks to an external site.
------------------------------------------------------------------------------------------------
-1. microsoft sign up form
-2. information to collect:
-    email - email input
-    first/last name - text input
-    password - password input
-    phone number - tel input
-    Country/Region - dropdown
-    birthdate - month / day / year
-3. Look at the Required HTML Elements and Required CSS Elements.
-Make a rough plan with your partner on what content you want on your page and how you want it to look.
-Consider sketching a picture to plan.
-
-
-
-Todo (add if you find more):
+<!-- Todo (add if you find more):
 input type = number - DONE Phone Number added
-input type = radio 
-1 new type of input - might be done already with date
+input type = radio - done with gender
+1 new type of input - done already with date -->
 
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -101,9 +40,9 @@ input type = radio
                 <input type="email" id="email" name="email" placeholder="Email Address" required>
             </div>
 
-            <div class="form-contents">
+            <!-- <div class="form-contents">
                 <input type="number" id="idNumber" name="idNumber" placeholder="ID Number">
-            </div>
+            </div> -->
             
             <div class="form-contents">
                 <label for="password">Password:</label>
@@ -113,6 +52,16 @@ input type = radio
             <div class="form-contents">
                 <label for="name">Name (First/Last):</label>
                 <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+
+            <div class="form-contents">
+                <label for="gender">Gender: </label>
+                <br>
+                <input type="radio" id="genderMale" name="gender" value="male" required>
+                <label for="genderMale">Male</label>
+                <br>
+                <input type="radio" id="genderFemale" name="gender" value="female" required>
+                <label for="genderFemale">Female</label>
             </div>
 
             <div class="form-contents">
@@ -137,7 +86,7 @@ input type = radio
             </div>
             
             <div class="form-contents">
-                <button type="submit">Submit</button>
+                <button type="submit" id="submitbutton">Submit</button>
             </div>
         </div>
     </form>
