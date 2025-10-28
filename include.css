@@ -28,6 +28,15 @@ At least 3 different colors applied to backgrounds, text, etc. 3/3 */
     margin-left: 10px;
 }
 
+.benefits {
+  margin: 20px 20px 20px 90px;
+  padding-left: 30px;
+}
+
+.spacer {
+  height: 24px;
+}
+
 h1 {
     font-size: 50px;
 }

